@@ -9,19 +9,67 @@
     <div class="p-col-4">
         <p-card header="Upercase"
                 [subheader]="nombreLower | uppercase">
-           {{ nombreLower | uppercase }} 
+           {{ nombreLower | uppercase }}
         </p-card>
     </div>
     <div class="p-col-4">
         <p-card header="Lowecase"
                 [subheader]="nombreUpper | lowercase">
-           {{ nombreLower | lowercase }} 
+           {{ nombreLower | lowercase }}
         </p-card>
     </div>
     <div class="p-col-4">
         <p-card header="Titlecase"
                 [subheader]="nombreCompleto | titlecase">
-           {{ nombreCompleto | titlecase }} 
+           {{ nombreCompleto | titlecase }}
         </p-card>
     </div>
+</div>
+
+
+<div class="text-layout">
+  <h1>Date | Fecha | Pipe</h1>
+  <p>
+      Pipe para mostrar las fechas.
+  </p>
+</div>
+
+
+<div class="p-grid">
+  <div class="p-col-6">
+      <p-card >
+        <ul>
+          <li> fecha </li>
+          <li> fecha | date </li>
+          <li> fecha | date: 'long' </li>
+          <li> fecha | date: 'dd/mm/yyyy' </li>
+        </ul>
+
+        <hr>
+        <ul>
+          <li>
+            fecha | date: 'long': 'GMT-6'
+          </li>
+        </ul>
+
+      </p-card>
+  </div>
+  <div class="p-col-6">
+      <p-card >
+        <ul>
+          <li>{{ fecha }}</li>
+          <li>{{ fecha | date }}</li>
+          <li>{{ fecha | date: 'long' }}</li>
+          <li>{{ fecha | date: 'dd/MMMM/yyyy' }}</li>
+        </ul>
+
+        <hr>
+        <ul>
+          <li>
+            {{ fecha | date: 'long': 'GMT-6' }}
+          </li>
+        </ul>
+
+      </p-card>
+  </div>
 </div>
